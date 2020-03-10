@@ -16,8 +16,6 @@ export class LoginComponent implements OnInit {
               private router: Router,
   ) {
   }
-  static user: IUsers;
-
   loginForm;
 
   ngOnInit(): void {
@@ -34,8 +32,7 @@ export class LoginComponent implements OnInit {
     };
     this.userService.login(user).subscribe(next => {
       if (next.status === true) {
-        LoginComponent.user = next;
-        this.router.navigate(['chat-box']);
+        this.router.navigate(['chat-box/' + next.id]);
       }
     });
   }
