@@ -1,7 +1,7 @@
 // tslint:disable-next-line:no-empty-interface
 export interface IUsers {
-  name: string;
+  name?: string;
   email: string;
-  status: number;
+  status?: boolean;
   password: string;
 }
