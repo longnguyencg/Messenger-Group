@@ -12,7 +12,9 @@ import { LoginComponent } from './login/login.component';
 import { SearchUserComponent } from './chat-box/search-user/search-user.component';
 import {HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
-import { ListUsersComponent } from './chat-box/list-users/list-users.component'
+import { ListUsersComponent } from './chat-box/list-users/list-users.component';
+import { MessageGroupComponent } from './chat-box/message-group/message-group.component';
+import { MessageNewGroupComponent } from './chat-box/message-new-group/message-new-group.component'
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { ListUsersComponent } from './chat-box/list-users/list-users.component'
     LoginComponent,
     SearchUserComponent,
     ListUsersComponent,
+    MessageGroupComponent,
+    MessageNewGroupComponent,
   ],
   imports: [
     BrowserModule,
