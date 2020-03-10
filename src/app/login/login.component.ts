@@ -17,7 +17,8 @@ export class LoginComponent implements OnInit {
   constructor(private fb: FormBuilder,
               private authService: AuthService,
               private userService: UsersService,
-              private router: Router) {
+              private router: Router,
+              private lg: LoginService) {
   }
 
   ngOnInit(): void {
@@ -32,15 +33,8 @@ export class LoginComponent implements OnInit {
       email: data.email,
       password: data.password,
     };
-    const dataCurrent = this.userService.getAll();
-    // @ts-ignore
-    if (this.authService.checkLogin(user, dataCurrent)) {
-      alert('oki');
-      this.router.navigate(['/chat-box']);
-    } else {
-      alert('sai roi');
-    }
-
+    this.lg.login(user).subscribe(next => {
+      if (next.status === true) { this.router.navigate(['chat-box']); } });
   }
 
 }
