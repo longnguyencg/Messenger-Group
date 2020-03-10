@@ -1,14 +1,22 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 import {LoginService} from './service/login.service';
 import {ChatBoxComponent} from './chat-box/chat-box.component';
 import {LoginComponent} from './login/login.component';
+import {MessageGroupComponent} from './chat-box/message-group/message-group.component';
+import {MessageNewGroupComponent} from './chat-box/message-new-group/message-new-group.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'chat-box', component: ChatBoxComponent },
-  { path: 'login', component: LoginComponent },
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
+  {
+    path: 'chat-box', component: ChatBoxComponent,
+    children: [
+      {path: 'new-group', component: MessageNewGroupComponent},
+      {path: '', component: MessageGroupComponent}
+    ]
+  },
+  {path: 'login', component: LoginComponent},
 ];
 
 
@@ -16,4 +24,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
