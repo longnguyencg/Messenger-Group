@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {IUsers} from '../../interface/iusers';
+import {UsersService} from '../../service/users.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-message-new-group',
@@ -6,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./message-new-group.component.css']
 })
 export class MessageNewGroupComponent implements OnInit {
-
-  constructor() { }
+  id;
+  users: IUsers[];
+  constructor(protected usersService: UsersService, protected route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.paramMap.get('id');
   }
 
 }

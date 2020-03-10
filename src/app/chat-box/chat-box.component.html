@@ -1,6 +1,6 @@
 <div id="chat-container">
   <div id="search-container">
-    <app-search></app-search>
+<!--    <app-search></app-search>-->
   </div>
   <div id="conversation-list">
     <div class="conversation active" *ngFor="let user of users">
@@ -13,7 +13,7 @@
   </div>
   <div id="new-message-container">
     <a href="#">+</a>
-    <!--    <span><button (click)="logout(user.id)">LogOut</button></span>-->
+        <span><button (click)="logout()">LogOut</button></span>
   </div>
   <div id="chat-title">
     <app-chat-title></app-chat-title>

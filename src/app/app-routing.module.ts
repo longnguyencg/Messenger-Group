@@ -9,7 +9,7 @@ import {MessageNewGroupComponent} from './chat-box/message-new-group/message-new
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {
-    path: 'chat-box', component: ChatBoxComponent,
+    path: 'chat-box/:id', component: ChatBoxComponent,
     children: [
       {path: 'new-group', component: MessageNewGroupComponent},
       {path: '', component: MessageGroupComponent}
