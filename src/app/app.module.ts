@@ -14,7 +14,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
 import { ListUsersComponent } from './chat-box/list-users/list-users.component';
 import { MessageGroupComponent } from './chat-box/message-group/message-group.component';
-import { MessageNewGroupComponent } from './chat-box/message-new-group/message-new-group.component'
+import { MessageNewGroupComponent } from './chat-box/message-new-group/message-new-group.component';
+import {FormsModule} from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { MessageNewGroupComponent } from './chat-box/message-new-group/message-n
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
