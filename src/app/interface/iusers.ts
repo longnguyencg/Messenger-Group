@@ -2,6 +2,6 @@
 export interface IUsers {
   name: string;
   email: string;
-  status: string;
+  status: number;
   password: string;
 }
