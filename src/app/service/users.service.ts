@@ -1,45 +1,27 @@
 import {Injectable} from '@angular/core';
 import {IUsers} from '../interface/iusers';
+import {Observable} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
+  url = 'http://127.0.0.1:8000/api/';
 
-  users: IUsers[] = [{
-    name: 'Hoang',
-    email: 'hoang@gmail.com',
-    // @ts-ignore
-    status: 1,
-    password: '123456'
-  },
-    {
-      name: 'Dieu',
-      email: 'dieu@gmail.com',
-      // @ts-ignore
-      status: 2,
-      password: '123456'
-    },
-    {
-      name: 'Long',
-      email: 'long@gmail.com',
-      // @ts-ignore
-      status: 1,
-      password: '123456'
-    },
-    {
-      name: 'An',
-      email: 'an@gmail.com',
-      // @ts-ignore
-      status: 1,
-      password: '123456'
-    }];
-
-  constructor() {
+  constructor(protected http: HttpClient) {
   }
 
   // @ts-ignore
-  getAll(): IUsers[] {
-    return this.users;
+  getAll(): Observable<IUsers[]> {
+    return this.http.get<IUsers[]>(this.url + 'users');
+  }
+
+  login(data): Observable<IUsers> {
+    return this.http.post<IUsers>(this.url + 'login', data);
+  }
+
+  logout(id) {
+    return this.http.get(this.url + 'logout/' + id);
   }
 }

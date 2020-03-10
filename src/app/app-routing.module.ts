@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {LoginService} from './service/login.service';
 import {ChatBoxComponent} from './chat-box/chat-box.component';
 import {LoginComponent} from './login/login.component';
 import {MessageGroupComponent} from './chat-box/message-group/message-group.component';

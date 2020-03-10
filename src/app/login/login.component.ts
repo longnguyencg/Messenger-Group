@@ -1,9 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder} from '@angular/forms';
-import {AuthService} from '../service/auth.service';
-import {LoginService} from '../service/login.service';
 import {UsersService} from '../service/users.service';
 import {Router} from '@angular/router';
+import {IUsers} from '../interface/iusers';
 
 @Component({
   selector: 'app-login',
@@ -12,14 +11,14 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  loginForm;
-
   constructor(private fb: FormBuilder,
-              private authService: AuthService,
               private userService: UsersService,
               private router: Router,
-              private lg: LoginService) {
+  ) {
   }
+  static user: IUsers;
+
+  loginForm;
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -33,8 +32,12 @@ export class LoginComponent implements OnInit {
       email: data.email,
       password: data.password,
     };
-    this.lg.login(user).subscribe(next => {
-      if (next.status === true) { this.router.navigate(['chat-box']); } });
+    this.userService.login(user).subscribe(next => {
+      if (next.status === true) {
+        LoginComponent.user = next;
+        this.router.navigate(['chat-box']);
+      }
+    });
   }
 
 }

@@ -3,107 +3,17 @@
     <app-search></app-search>
   </div>
   <div id="conversation-list">
-    <div class="conversation active">
+    <div class="conversation active" *ngFor="let user of users">
       <img src="../../assets/img/22221766_1778849459079010_7218011907299294403_n.jpg" alt="#"
            style="width: 55px;height: 55px">
       <div class="title-text">
-        Diệu
-      </div>
-      <div class="created-date">
-        Apr 16
-      </div>
-      <div class="conversation-message">
-        This is message
-      </div>
-    </div>
-
-
-    <div class="conversation active">
-      <img src="../../assets/img/22221766_1778849459079010_7218011907299294403_n.jpg" alt="#"
-           style="width: 55px;height: 55px">
-      <div class="title-text">
-        Diệu
-      </div>
-      <div class="created-date">
-        Apr 16
-      </div>
-      <div class="conversation-message">
-        This is message
-      </div>
-    </div>
-
-    <div class="conversation active">
-      <img src="../../assets/img/22221766_1778849459079010_7218011907299294403_n.jpg" alt="#"
-           style="width: 55px;height: 55px">
-      <div class="title-text">
-        Diệu
-      </div>
-      <div class="created-date">
-        Apr 16
-      </div>
-      <div class="conversation-message">
-        This is message
-      </div>
-    </div>
-
-    <div class="conversation active">
-      <img src="../../assets/img/22221766_1778849459079010_7218011907299294403_n.jpg" alt="#"
-           style="width: 55px;height: 55px">
-      <div class="title-text">
-        Diệu
-      </div>
-      <div class="created-date">
-        Apr 16
-      </div>
-      <div class="conversation-message">
-        This is message
-      </div>
-    </div>
-
-    <div class="conversation active">
-      <img src="../../assets/img/22221766_1778849459079010_7218011907299294403_n.jpg" alt="#"
-           style="width: 55px;height: 55px">
-      <div class="title-text">
-        Diệu
-      </div>
-      <div class="created-date">
-        Apr 16
-      </div>
-      <div class="conversation-message">
-        This is message
-      </div>
-    </div>
-
-    <div class="conversation active">
-      <img src="../../assets/img/22221766_1778849459079010_7218011907299294403_n.jpg" alt="#"
-           style="width: 55px;height: 55px">
-      <div class="title-text">
-        Diệu
-      </div>
-      <div class="created-date">
-        Apr 16
-      </div>
-      <div class="conversation-message">
-        This is message
-      </div>
-    </div>
-
-    <div class="conversation active">
-      <img src="../../assets/img/22221766_1778849459079010_7218011907299294403_n.jpg" alt="#"
-           style="width: 55px;height: 55px">
-      <div class="title-text">
-        Diệu
-      </div>
-      <div class="created-date">
-        Apr 16
-      </div>
-      <div class="conversation-message">
-        This is message
+        {{ user.name }}
       </div>
     </div>
   </div>
   <div id="new-message-container">
     <a href="#">+</a>
+    <!--    <span><button (click)="logout(user.id)">LogOut</button></span>-->
   </div>
   <div id="chat-title">
     <app-chat-title></app-chat-title>
