@@ -20,7 +20,7 @@ import { ListUsersComponent } from './chat-box/list-users/list-users.component'
     UsersListComponent,
     UsersAddComponent,
     UsersEditComponent,
-    RegisterComponent
+    RegisterComponent,
     ChatBoxComponent,
     LoginComponent,
     SearchUserComponent,
