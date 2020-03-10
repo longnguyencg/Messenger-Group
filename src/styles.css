@@ -10,7 +10,7 @@ html, body {
 
 html {
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(to right, #57c1eb 0%, #246fa8 100%);
+  background: linear-gradient(to right, #57c1eb 0%, #246fa8 100%) !important;
   font-size: 10px;
 }
 
