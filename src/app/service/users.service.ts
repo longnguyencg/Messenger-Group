@@ -10,28 +10,28 @@ export class UsersService {
     name: 'Hoang',
     email: 'hoang@gmail.com',
     // @ts-ignore
-    status: false,
+    status: 1,
     password: '123456'
   },
     {
       name: 'Dieu',
       email: 'dieu@gmail.com',
       // @ts-ignore
-      status: false,
+      status: 2,
       password: '123456'
     },
     {
       name: 'Long',
       email: 'long@gmail.com',
       // @ts-ignore
-      status: false,
+      status: 1,
       password: '123456'
     },
     {
       name: 'An',
       email: 'an@gmail.com',
       // @ts-ignore
-      status: false,
+      status: 1,
       password: '123456'
     }];
 
