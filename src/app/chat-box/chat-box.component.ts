@@ -25,7 +25,7 @@ export class ChatBoxComponent implements OnInit {
 
   getAllUsers() {
     this.usersService.getAll().subscribe(next => {
-      this.users = next;
+      this.users = next['data'];
     });
   }
 
