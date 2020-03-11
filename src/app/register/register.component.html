@@ -1,0 +1,54 @@
+<div class="login-container">
+  <form action="" class="form-login" [formGroup]="registerForm"  (ngSubmit)="login(registerForm.value)">
+    <ul class="login-nav">
+      <li class="login-nav__item active" style="text-align: center">
+        <a routerLink="/login">Sign In</a>
+      </li>
+    </ul>
+    <label  class="login__label">
+      Name
+    </label>
+    <input class="login__input form-group" type="text" formControlName="name" />
+<!--    <div *ngIf="getName.invalid && (getName.dirty || getName.touched)"-->
+<!--         class="alert alert-danger">-->
+
+<!--      <div *ngIf="getName.errors.required">-->
+<!--        Name is required.-->
+<!--      </div>-->
+<!--    </div>-->
+    <label  class="login__label">
+      Email
+    </label>
+    <input class="login__input form-group" type="email" formControlName="email" />
+<!--    <div *ngIf="getEmail.invalid && (getEmail.dirty || getEmail.touched)"-->
+<!--         class="alert alert-danger">-->
+
+<!--      <div *ngIf="getEmail.errors.required">-->
+<!--        Email is required.-->
+<!--      </div>-->
+<!--      <div *ngIf="getEmail.errors.email">-->
+<!--        Email is invalid.-->
+<!--      </div>-->
+<!--    </div>-->
+    <label class="login__label">
+      Password
+    </label>
+    <input  class="login__input form-group" type="password" formControlName="password"/>
+<!--    <div *ngIf="getPassword.invalid && (getPassword.dirty || getPassword.touched)"-->
+<!--         class="alert alert-danger">-->
+
+<!--      <div *ngIf="getPassword.errors.required">-->
+<!--        Password is required.-->
+<!--      </div>-->
+<!--    </div>-->
+    <label  class="login__label--checkbox">
+      <input  type="checkbox" class="login__input--checkbox" />
+      Keep me Signed in
+    </label>
+    <button type="submit" class="login__submit">Create</button>
+  </form>
+</div>
+
+
+
+
