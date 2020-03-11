@@ -14,7 +14,9 @@ export class ChatBoxComponent implements OnInit {
   user: IUsers;
   users: IUsers[];
 
-  constructor(protected router: Router, protected usersService: UsersService, protected route: ActivatedRoute) {
+  constructor(protected router: Router,
+              protected usersService: UsersService,
+              protected route: ActivatedRoute) {
   }
 
   ngOnInit(): void {

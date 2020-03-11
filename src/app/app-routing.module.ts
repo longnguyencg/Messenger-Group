@@ -4,6 +4,7 @@ import {ChatBoxComponent} from './chat-box/chat-box.component';
 import {LoginComponent} from './login/login.component';
 import {MessageGroupComponent} from './chat-box/message-group/message-group.component';
 import {MessageNewGroupComponent} from './chat-box/message-new-group/message-new-group.component';
+import {RegisterComponent} from './register/register.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
     ]
   },
   {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
 ];
 
 
