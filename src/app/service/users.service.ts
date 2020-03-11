@@ -24,7 +24,12 @@ export class UsersService {
   logout(id) {
     return this.http.get(this.url + 'logout/' + id);
   }
+
   findById(id): Observable<IUsers> {
     return this.http.get<IUsers>(this.url + 'users/' + id);
+  }
+
+  add(users: IUsers): Observable<IUsers> {
+    return this.http.post<IUsers>(this.url + 'users', users);
   }
 }
