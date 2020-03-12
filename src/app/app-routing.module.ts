@@ -9,13 +9,7 @@ import {RegisterComponent} from './register/register.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
-  {
-    path: 'chat-box/:id', component: ChatBoxComponent,
-    children: [
-      {path: 'new-group', component: MessageNewGroupComponent},
-      {path: '', component: MessageGroupComponent}
-    ]
-  },
+  {path: 'chat-box/:id', component: ChatBoxComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
 ];
